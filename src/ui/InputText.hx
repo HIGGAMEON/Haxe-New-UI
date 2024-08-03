@@ -8,7 +8,7 @@ import flash.events.KeyboardEvent;
 import lime.system.Clipboard;
 import flixel.text.FlxTextFormat;
 import flixel.FlxSprite;
-import flixel.FlxText;
+import.flixel.text.FlxText;
 import flixel.FlxColor;
 import flixel.FlxG;
 import Std;

@@ -2,7 +2,7 @@ package ui;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.FlxText;
+import.flixel.text.FlxText;
 import ui.InputText;
 import ui.Box.UIStyleData;
 import ui.EventHandler;

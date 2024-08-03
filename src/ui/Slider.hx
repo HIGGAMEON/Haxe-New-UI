@@ -1,8 +1,8 @@
 package ui;
 
 import flixel.FlxSprite;
-import flixel.FlxText;
-import flixel.FlxColor;
+import.flixel.text.FlxText;
+import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.math.FlxPoint;
 
