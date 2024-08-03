@@ -1,4 +1,4 @@
-package ui;
+package hxn.ui;
 
 import flixel.util.FlxDestroyUtil;
 import flixel.math.FlxPoint;
@@ -9,7 +9,7 @@ import.flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
 
-import ui.Box;
+import hxn.ui.Box;
 
 class Tab extends FlxSprite
 {

@@ -1,4 +1,4 @@
-package ui;
+package hxn.ui;
 
 import flixel.util.FlxColor;
 import flixel.group.FlxSpriteGroup;
@@ -8,8 +8,8 @@ import flixel.FlxCamera;
 import flixel.math.FlxPoint;
 import Math;
 
-import ui.Tab;
-import ui.EventHandler;
+import hxn.ui.Tab;
+import hxn.ui.EventHandler;
 
 typedef UIStyleData = {
 	var bgColor:FlxColor;

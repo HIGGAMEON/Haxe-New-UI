@@ -1,4 +1,4 @@
-package ui;
+package hxn.ui;
 
 import flixel.group.FlxSpriteGroup;
 import flixel.FlxObject;
@@ -8,12 +8,12 @@ import flash.events.KeyboardEvent;
 import lime.system.Clipboard;
 import flixel.text.FlxTextFormat;
 import flixel.FlxSprite;
-import.flixel.text.FlxText;
+import flixel.text.FlxText;
 import flixel.FlxColor;
 import flixel.FlxG;
 import Std;
 import Math;
-import ui.EventHandler;
+import hxn.ui.EventHandler;
 
 enum abstract AccentCode(Int) from Int from UInt to Int to UInt
 {

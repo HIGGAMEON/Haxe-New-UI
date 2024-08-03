@@ -1,7 +1,7 @@
-package ui;
+package hxn.ui;
 
 import flixel.FlxSprite;
-import.flixel.text.FlxText;
+import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.math.FlxPoint;
@@ -9,7 +9,7 @@ import flixel.math.FlxPoint;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath
 
-import ui.EventHandler;
+import hxn.ui.EventHandler;
 
 class Slider extends FlxSpriteGroup
 {

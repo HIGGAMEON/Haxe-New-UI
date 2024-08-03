@@ -1,4 +1,4 @@
-package ui;
+package hxn.ui;
 
 import flixel.FlxG;
 

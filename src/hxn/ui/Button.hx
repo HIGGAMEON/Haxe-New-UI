@@ -1,6 +1,6 @@
-package ui;
+package hxn.ui;
 
-import ui.Box.UIStyleData;
+import hxn.ui.Box.UIStyleData;
 
 import flixel.FlxG;
 import flixel.group.FlxSpriteGroup;

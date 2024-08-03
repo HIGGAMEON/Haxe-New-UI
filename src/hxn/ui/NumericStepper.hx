@@ -1,9 +1,9 @@
-package ui;
+package hxn.ui;
 
 import flixel.FlxSprite;
-import ui.InputText;
+import hxn.ui.InputText;
 import flixel.FlxG;
-import ui.EventHandler;
+import hxn.ui.EventHandler;
 import Math;
 
 class NumericStepper extends InputText
