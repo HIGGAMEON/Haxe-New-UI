@@ -1,4 +1,4 @@
-package;
+package ui;
 
 import flixel.util.FlxColor;
 import flixel.group.FlxSpriteGroup;
@@ -8,9 +8,8 @@ import flixel.FlxCamera;
 import flixel.math.FlxPoint;
 import Math;
 
-import Tab;
-import Handler;
-import EventHandler;
+import ui.Tab;
+import ui.EventHandler;
 
 typedef UIStyleData = {
 	var bgColor:FlxColor;
@@ -107,7 +106,7 @@ class Box extends FlxSpriteGroup
 				if(_pressedBox) forceCheckNext = true;
 				_pressedBox = false;
 			}
-			if(wasDragging && broadcastBoxEvents) Handler.event(DROP_EVENT, this);
+			if(wasDragging && broadcastBoxEvents) EventHandler.event(DROP_EVENT, this);
 		}
 
 		for (tab in tabs)

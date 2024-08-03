@@ -1,4 +1,4 @@
-package;
+package ui;
 
 import flixel.group.FlxSpriteGroup;
 import flixel.FlxObject;
@@ -13,7 +13,7 @@ import flixel.FlxColor;
 import flixel.FlxG;
 import Std;
 import Math;
-import EventHandler;
+import ui.EventHandler;
 
 enum abstract AccentCode(Int) from Int from UInt to Int to UInt
 {

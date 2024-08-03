@@ -1,11 +1,11 @@
-package;
+package ui;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxText;
-import InputText;
-import Box.UIStyleData;
-import EventHandler;
+import ui.InputText;
+import ui.Box.UIStyleData;
+import ui.EventHandler;
 import openfl.display.BitmapData;
 
 class DropDownMenu extends InputText

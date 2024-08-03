@@ -1,4 +1,4 @@
-package;
+package ui;
 
 import flixel.util.FlxDestroyUtil;
 import flixel.FlxObject;
@@ -7,7 +7,7 @@ import flixel.group.FlxSpriteGroup;
 import flixel.FlxSprite;
 import flixel.FlxG;
 
-import CheckBox;
+import ui.CheckBox;
 
 import Math;
 import Std;

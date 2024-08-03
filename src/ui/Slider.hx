@@ -1,4 +1,4 @@
-package;
+package ui;
 
 import flixel.FlxSprite;
 import flixel.FlxText;
@@ -9,7 +9,7 @@ import flixel.math.FlxPoint;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath
 
-import EventHandler;
+import ui.EventHandler;
 
 class Slider extends FlxSpriteGroup
 {

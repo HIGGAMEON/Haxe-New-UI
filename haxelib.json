@@ -1,0 +1,13 @@
+{
+    "name": "HXNUI",
+    "url" : "https://github.com/HIGGAMEON/HXNUI",
+    "license": "Apache",
+    "tags": ["fnf"],
+    "description": "A modchart framework for Friday Night Funkin.",
+    "version": "1.0.0",
+    "classPath": "src/",
+    "releasenote": "",
+    "contributors": ["HIGGAMEON"],
+    "dependencies": {
+    }
+}

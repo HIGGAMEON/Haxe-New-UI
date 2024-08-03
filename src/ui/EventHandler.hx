@@ -1,4 +1,4 @@
-package;
+package ui;
 
 import flixel.FlxG;
 
@@ -17,6 +17,6 @@ class EventHandler
 	}
 }
 
-interface PsychUIEvent {
+interface Event {
 	public function UIEvent(id:String, sender:Dynamic):Void;
 }
