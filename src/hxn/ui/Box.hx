@@ -11,6 +11,8 @@ import Math;
 import hxn.ui.Tab;
 import hxn.ui.EventHandler;
 
+using StringTools;
+
 typedef UIStyleData = {
 	var bgColor:FlxColor;
 	var textColor:FlxColor;

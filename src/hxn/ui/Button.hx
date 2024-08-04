@@ -1,6 +1,7 @@
 package hxn.ui;
 
 import hxn.ui.Box.UIStyleData;
+import hxn.ui.EventHandler;
 
 import flixel.FlxG;
 import flixel.group.FlxSpriteGroup;
@@ -97,7 +98,7 @@ class Button extends FlxSpriteGroup
 				bg.alpha = clickStyle.bgAlpha;
 				text.color = clickStyle.textColor;
 				if(onClick != null) onClick();
-				if(broadcastButtonEvent) PsychUIEventHandler.event(CLICK_EVENT, this);
+				if(broadcastButtonEvent) EventHandler.event(CLICK_EVENT, this);
 			}
 		}
 	}
