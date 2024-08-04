@@ -5,7 +5,7 @@ import flixel.math.FlxPoint;
 import flixel.group.FlxSpriteGroup;
 
 import flixel.FlxSprite;
-import.flixel.text.FlxText;
+import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.FlxCamera;
 
