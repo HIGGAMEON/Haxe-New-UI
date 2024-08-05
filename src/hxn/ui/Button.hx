@@ -65,7 +65,7 @@ class Button extends FlxSpriteGroup
 	{
 		super.update(elapsed);
 
-		if((this.visible || !ignore)) {
+		if((this.visible && !ignore)) {
 			if(_firstFrame)
 			{
 				bg.color = normalStyle.bgColor;
