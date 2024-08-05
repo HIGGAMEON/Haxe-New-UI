@@ -77,7 +77,7 @@ class Button extends FlxSpriteGroup
 			isClicked = false;
 		}
 
-		if(forceCheckNext || FlxG.mouse.justMoved || FlxG.mouse.justPressed)
+		if(forceCheckNext || FlxG.mouse.justMoved || FlxG.mouse.justPressed || FlxG.mouse.justReleased)
 		{
 			var overlapped:Bool = (FlxG.mouse.overlaps(bg, camera));
 
@@ -91,14 +91,16 @@ class Button extends FlxSpriteGroup
 				text.color = style.textColor;
 			}
 
-			if(overlapped && FlxG.mouse.justPressed)
+			if(overlapped && (FlxG.mouse.justPressed || FlxG.mouse.justReleased))
 			{
 				isClicked = true;
 				bg.color = clickStyle.bgColor;
 				bg.alpha = clickStyle.bgAlpha;
 				text.color = clickStyle.textColor;
-				if(onClick != null) onClick();
-				if(broadcastButtonEvent) EventHandler.event(CLICK_EVENT, this);
+				if(FlxG.mouse.justReleased) {
+					if(onClick != null) onClick();
+					if(broadcastButtonEvent) EventHandler.event(CLICK_EVENT, this);
+				}
 			}
 		}
 	}
