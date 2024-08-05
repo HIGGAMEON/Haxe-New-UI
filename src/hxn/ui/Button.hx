@@ -20,6 +20,8 @@ class Button extends FlxSpriteGroup
 
 	public var onChangeState:String->Void;
 	public var onClick:Void->Void;
+
+	public var ignore:Bool = false;
 	
 	public var clickStyle:UIStyleData = {
 		bgColor: FlxColor.BLACK,
@@ -63,43 +65,45 @@ class Button extends FlxSpriteGroup
 	{
 		super.update(elapsed);
 
-		if(_firstFrame)
-		{
-			bg.color = normalStyle.bgColor;
-			bg.alpha = normalStyle.bgAlpha;
-			text.color = normalStyle.textColor;
-			_firstFrame = false;
-		}
-		
-		if(isClicked && FlxG.mouse.released)
-		{
-			forceCheckNext = true;
-			isClicked = false;
-		}
-
-		if(forceCheckNext || FlxG.mouse.justMoved || FlxG.mouse.justPressed || FlxG.mouse.justReleased)
-		{
-			var overlapped:Bool = (FlxG.mouse.overlaps(bg, camera));
-
-			forceCheckNext = false;
-
-			if(!isClicked)
+		if((this.visible || !ignore)) {
+			if(_firstFrame)
 			{
-				var style:UIStyleData = (overlapped) ? hoverStyle : normalStyle;
-				bg.color = style.bgColor;
-				bg.alpha = style.bgAlpha;
-				text.color = style.textColor;
+				bg.color = normalStyle.bgColor;
+				bg.alpha = normalStyle.bgAlpha;
+				text.color = normalStyle.textColor;
+				_firstFrame = false;
+			}
+			
+			if(isClicked && FlxG.mouse.released)
+			{
+				forceCheckNext = true;
+				isClicked = false;
 			}
 
-			if(overlapped && (FlxG.mouse.justPressed || FlxG.mouse.justReleased))
+			if(forceCheckNext || FlxG.mouse.justMoved || FlxG.mouse.justPressed || FlxG.mouse.justReleased)
 			{
-				isClicked = true;
-				bg.color = clickStyle.bgColor;
-				bg.alpha = clickStyle.bgAlpha;
-				text.color = clickStyle.textColor;
-				if(FlxG.mouse.justReleased) {
-					if(onClick != null) onClick();
-					if(broadcastButtonEvent) EventHandler.event(CLICK_EVENT, this);
+				var overlapped:Bool = (FlxG.mouse.overlaps(bg, camera));
+
+				forceCheckNext = false;
+
+				if(!isClicked)
+				{
+					var style:UIStyleData = (overlapped) ? hoverStyle : normalStyle;
+					bg.color = style.bgColor;
+					bg.alpha = style.bgAlpha;
+					text.color = style.textColor;
+				}
+
+				if(overlapped && (FlxG.mouse.justPressed || FlxG.mouse.justReleased))
+				{
+					isClicked = true;
+					bg.color = clickStyle.bgColor;
+					bg.alpha = clickStyle.bgAlpha;
+					text.color = clickStyle.textColor;
+					if(FlxG.mouse.justReleased) {
+						if(onClick != null) onClick();
+						if(broadcastButtonEvent) EventHandler.event(CLICK_EVENT, this);
+					}
 				}
 			}
 		}
