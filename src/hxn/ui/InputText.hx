@@ -144,7 +144,7 @@ class InputText extends FlxSpriteGroup
 					text = text.substring(0, caretIndex) + Clipboard.text + text.substring(caretIndex);
 					caretIndex += Clipboard.text.length;
 					if(onChange != null) onChange(lastText, text);
-					if(broadcastInputTextEvent) PsychUIEventHandler.event(CHANGE_EVENT, this);
+					if(broadcastInputTextEvent) EventHandler.event(CHANGE_EVENT, this);
 
 				case BACKSPACE:
 					if(selectIndex < 0 || selectIndex == caretIndex)
@@ -166,7 +166,7 @@ class InputText extends FlxSpriteGroup
 						}
 						selectIndex = -1;
 						if(onChange != null) onChange(lastText, text);
-						if(broadcastInputTextEvent) PsychUIEventHandler.event(CHANGE_EVENT, this);
+						if(broadcastInputTextEvent) EventHandler.event(CHANGE_EVENT, this);
 					}
 					else deleteSelection();
 
@@ -191,7 +191,7 @@ class InputText extends FlxSpriteGroup
 						}
 						else text = text.substr(0, caretIndex);
 						if(onChange != null) onChange(lastText, text);
-						if(broadcastInputTextEvent) PsychUIEventHandler.event(CHANGE_EVENT, this);
+						if(broadcastInputTextEvent) EventHandler.event(CHANGE_EVENT, this);
 					}
 					else deleteSelection();
 
@@ -598,7 +598,7 @@ class InputText extends FlxSpriteGroup
 		v = Std.int(Math.max(0, v));
 		if(v > 0 && text.length > v) text = text.substr(0, v);
 		if(onChange != null) onChange(lastText, text);
-		if(broadcastInputTextEvent) PsychUIEventHandler.event(CHANGE_EVENT, this);
+		if(broadcastInputTextEvent) EventHandler.event(CHANGE_EVENT, this);
 		return (maxLength = v);
 	}
 
